@@ -11,12 +11,12 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Dataset
 datetime_cols = ["order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date", "order_estimated_delivery_date", "order_purchase_timestamp", "shipping_limit_date"]
-all_df = pd.read_csv("https://raw.githubusercontent.com/mhdhfzz/data-analyst-dicoding/main/dashboard/df.csv")
+all_df = pd.read_csv("https://github.com/nurfajaryulianto/Dicoding_subMission/blob/7e07eda7629c666fbd21e1b61b84012832754b11/Dicoding%20Submission_Data%20Science/dashboard/df.csv")
 all_df.sort_values(by="order_approved_at", inplace=True)
 all_df.reset_index(inplace=True)
 
 # Geolocation Dataset
-geolocation = pd.read_csv('https://raw.githubusercontent.com/mhdhfzz/data-analyst-dicoding/main/dashboard/geolocation.csv')
+geolocation = pd.read_csv('https://github.com/nurfajaryulianto/Dicoding_subMission/blob/7e07eda7629c666fbd21e1b61b84012832754b11/Dicoding%20Submission_Data%20Science/dashboard/geolocation.csv')
 data = geolocation.drop_duplicates(subset='customer_unique_id')
 
 for col in datetime_cols:
@@ -31,7 +31,7 @@ with st.sidebar:
     with col1:
         st.write(' ')
     with col2:
-        st.image("https://raw.githubusercontent.com/mhdhfzz/data-analyst-dicoding/main/dashboard/logo.png"
+        st.image("https://github.com/nurfajaryulianto/Dicoding_subMission/blob/7e07eda7629c666fbd21e1b61b84012832754b11/Dicoding%20Submission_Data%20Science/dashboard/logo.png"
                  , width=100)
     with col3:
         st.write(' ')
